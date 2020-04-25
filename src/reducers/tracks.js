@@ -7,8 +7,8 @@ export default function tracks(state = initialState, action) {
       return [
         ...state, action.payload
       ]
-    } else if (action.ype === 'DELETE_TRACK') {
-        return state;
+    } else if (action.type === 'FETCH_TRACKS_SUCCESS') {
+        return action.payload;
     }
     return state;
   }
